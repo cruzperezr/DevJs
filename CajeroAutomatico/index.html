@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1> Banco Nacional </h1>
+    <form action="">
+      <label for=""> Usuario </label>
+      <input type="text" name="usuario" id="" />
+      <label for=""> Password </label>
+      <input type="password" name="password" id="" />
+      <input type="button" value="Ingresar" onclick="login(this.form)" />
+    </form>
+    <script>
+
+         const usuarios = {
+        fernando: "123",
+        rodrigo: "456",
+        carlos: "789"
+      };
+
+      function login(form) {
+        const usuario = form.usuario.value;
+        const password = form.password.value;
+        if (usuarios[usuario] === password) {
+          location = "principal.html";
+        } else {
+          alert("error de usuario o password");
+        }
+      }
+    </script>
+  </body>
+</html>
